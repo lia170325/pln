@@ -1,0 +1,202 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#ece6e6;
+}
+
+.container{
+    width:98%;
+    margin:15px auto;
+}
+
+.page-title{
+    color:#2b8de8;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.main-box{
+    width:100%;
+    background:#fff;
+    border:3px solid #2b8de8;
+    padding:15px;
+}
+
+/* ===================== */
+/* JUDUL */
+/* ===================== */
+
+.header{
+    margin-bottom:10px;
+}
+
+.header h3{
+    font-size:18px;
+    color:#000;
+}
+
+.header p{
+    font-size:12px;
+    color:#666;
+    margin-top:2px;
+}
+
+/* ===================== */
+/* ISI */
+/* ===================== */
+
+.content{
+    display:flex;
+    gap:15px;
+}
+
+/* ===================== */
+/* SIDEBAR */
+/* ===================== */
+
+.sidebar{
+    width:210px;
+    border:1px solid #8dc7ff;
+    padding:10px;
+    background:#fff;
+}
+
+.sidebar details{
+    margin-bottom:10px;
+}
+
+.sidebar summary{
+    cursor:pointer;
+    list-style:none;
+    font-size:13px;
+    font-weight:bold;
+    padding:5px;
+}
+
+.sidebar summary:hover{
+    background:#eef7ff;
+}
+
+.sidebar ul{
+    list-style:none;
+    margin-left:20px;
+}
+
+.sidebar ul li{
+    padding:5px;
+    font-size:13px;
+}
+
+.sidebar ul li:hover{
+    background:#eef7ff;
+}
+
+.sidebar a{
+    color:#000;
+    text-decoration:none;
+}
+
+.sidebar a:hover{
+    color:#2b8de8;
+}
+
+/* ===================== */
+/* TABEL */
+/* ===================== */
+
+.table-area{
+    flex:1;
+    border:1px solid #8dc7ff;
+    padding:10px;
+    background:#fff;
+}
+
+.table-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.table-title h3{
+    font-size:16px;
+    color:#333;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#22a8e8;
+    color:#fff;
+    font-size:12px;
+    padding:8px;
+    border:1px solid #d9d9d9;
+}
+
+table td{
+    font-size:12px;
+    text-align:center;
+    padding:7px;
+    border:1px solid #d9d9d9;
+}
+
+table tr:nth-child(even){
+    background:#fafafa;
+}
+
+table tr:hover{
+    background:#eef7ff;
+}
+
+/* ===================== */
+/* PAGINATION */
+/* ===================== */
+
+.bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:10px;
+}
+
+.bottom small{
+    font-size:11px;
+    color:#555;
+}
+
+.pagination{
+    display:flex;
+    gap:5px;
+}
+
+.pagination button{
+    width:22px;
+    height:22px;
+    border:1px solid #22a8e8;
+    background:#fff;
+    color:#22a8e8;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.pagination button:hover{
+    background:#22a8e8;
+    color:#fff;
+}
+
+.search-box input{
+    width:150px;
+    height:24px;
+    border:1px solid #bbb;
+    border-radius:12px;
+    padding:5px 10px;
+    font-size:11px;
+}

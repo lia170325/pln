@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#fff;
+}
+
+/* ======================= */
+/* CONTAINER */
+/* ======================= */
+
+.container{
+    width:100%;
+    height:100vh;
+}
+
+.registrasi-container{
+    width:100%;
+    height:100vh;
+    display:flex;
+}
+
+/* ======================= */
+/* BAGIAN KIRI */
+/* ======================= */
+
+.left-panel{
+    width:50%;
+    height:100%;
+    position:relative;
+    overflow:hidden;
+}
+
+.bg-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.45);
+}
+
+.left-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:2;
+    text-align:center;
+    color:white;
+    width:80%;
+}
+
+.left-content h2{
+    font-size:55px;
+    font-weight:bold;
+    line-height:1.3;
+}
+
+/* ======================= */
+/* BAGIAN KANAN */
+/* ======================= */
+
+.right-panel{
+    width:50%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:white;
+}
+
+.registrasi-box{
+    width:70%;
+    max-width:600px;
+}
+
+.registrasi-box h1{
+    text-align:center;
+    color:#2c9be8;
+    font-size:72px;
+    font-weight:300;
+    margin-bottom:45px;
+}
+
+.registrasi-box label{
+    display:block;
+    font-size:18px;
+    margin-bottom:10px;
+    margin-top:20px;
+}
+
+.registrasi-box input{
+    width:100%;
+    padding:15px;
+    border:1px solid #d9d9d9;
+    border-radius:10px;
+    background:#edf4ff;
+    font-size:17px;
+    outline:none;
+}
+
+.registrasi-box input:focus{
+    border:1px solid #2c9be8;
+}
+
+.registrasi-box button{
+    width:100%;
+    padding:16px;
+    margin-top:35px;
+    background:#2c9be8;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.registrasi-box button:hover{
+    background:#1484d7;
+}
+
+.login-link{
+    margin-top:18px;
+    text-align:center;
+    font-size:18px;
+}
+
+.login-link a{
+    color:#2c9be8;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.login-link a:hover{
+    text-decoration:underline;
+}
