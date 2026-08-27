@@ -22,11 +22,19 @@
 
             <div class="left-content">
 
-                <h2>
-                    ADMIN PANEL <br>
-                    MONITORING KHS <br>
-                    PLN UP3 JAMBI
-                </h2>
+                <div class="brand-badge">
+                    <img src="{{ asset('images/logo-siginjai.png') }}" alt="Logo Tugu Keris Siginjai">
+                </div>
+
+                <span class="brand-eyebrow">ADMIN PANEL</span>
+
+                <div class="brand-logo">SIGINJAI</div>
+
+                <p class="brand-tagline">
+                    Sistem Gerbang Informasi Jasa , Anggaran & Investasi
+                </p>
+
+                <p class="brand-org">PLN UP3 Jambi</p>
 
             </div>
 
@@ -68,7 +76,7 @@
                     >
 
                     <button type="submit" class="btn-login">
-                        Login
+                        Log in
                     </button>
 
                 </form>

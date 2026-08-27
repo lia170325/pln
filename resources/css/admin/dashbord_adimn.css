@@ -1,0 +1,158 @@
+/* Import Font Modern 'Inter' */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ==============================
+   1. GLOBAL STYLING (TRUE DARK MODE)
+============================== */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #0f172a !important; /* Latar paling gelap */
+    color: #cbd5e1; /* Warna teks abu-abu terang */
+}
+
+h2, h4, h5 {
+    font-weight: 700;
+    color: #f8fafc !important; /* Judul warna putih cerah */
+    letter-spacing: -0.02em;
+}
+
+hr {
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ==============================
+   2. SIDEBAR STYLING
+============================== */
+.bg-dark {
+    background-color: #0f172a !important; /* Menyatu dengan background body */
+    border-right: 1px solid rgba(255, 255, 255, 0.05); /* Garis batas super tipis */
+}
+
+.nav-link {
+    border-radius: 8px;
+    margin: 4px 15px;
+    padding: 10px 15px;
+    color: #94a3b8 !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff !important;
+    transform: translateX(4px);
+}
+
+.nav-link.text-info, .nav-link.active {
+    background: rgba(14, 165, 233, 0.15) !important;
+    color: #38bdf8 !important;
+    font-weight: 600;
+    border-left: 3px solid #0ea5e9;
+    padding-left: 12px;
+}
+
+.nav-link.text-danger { color: #f43f5e !important; }
+.nav-link.text-danger:hover { background-color: rgba(244, 63, 94, 0.1) !important; }
+
+/* ==============================
+   3. KARTU (CARD) - DARK ELEVATED
+============================== */
+.card {
+    background-color: #1e293b !important; /* Warna kartu gelap (abu-abu kebiruan) */
+    border-radius: 16px !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 10px 15px -3px rgba(0, 0, 0, 0.2) !important;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card p.text-muted {
+    color: #94a3b8 !important;
+}
+
+/* ==============================
+   4. TABEL STYLING - DARK MODE
+============================== */
+.table-responsive {
+    background-color: #1e293b !important; /* Sama dengan warna kartu */
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table {
+    margin-bottom: 0;
+    border-color: #334155;
+}
+
+.table thead th {
+    background-color: #0f172a !important; /* Header tabel lebih gelap */
+    color: #94a3b8 !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    padding: 16px;
+    border-bottom: 2px solid #334155 !important;
+}
+
+.table thead tr th:first-child { border-top-left-radius: 8px; }
+.table thead tr th:last-child { border-top-right-radius: 8px; }
+
+.table tbody td {
+    background-color: #1e293b !important; /* Background sel gelap */
+    color: #cbd5e1 !important; /* Teks sel terang */
+    padding: 16px;
+    vertical-align: middle;
+    border-bottom: 1px solid #334155;
+}
+
+/* Hover Baris Tabel */
+.table tbody tr:hover td {
+    background-color: #334155 !important; /* Highlight saat disorot */
+    color: #ffffff !important;
+}
+
+/* ==============================
+   5. TOMBOL (BUTTONS)
+============================== */
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-dark {
+    background-color: #334155; /* Tombol abu-abu gelap */
+    color: #ffffff;
+}
+
+.btn-dark:hover {
+    background-color: #475569;
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   6. 4 INFORMASI UTAMA (STAT CARDS)
+============================== */
+.stat-card {
+    border-left: 4px solid #0ea5e9 !important;
+}
+
+.stat-card p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.stat-card h3 {
+    color: #f8fafc;
+    font-weight: 700;
+}

@@ -25,10 +25,17 @@
 
             <div class="left-content">
 
-                <h2>
-                    WEBSITE MONITORING <br>
-                    KHS PLN UP3 JAMBI
-                </h2>
+                <div class="brand-badge">
+                    <img src="{{ asset('images/logo-siginjai.png') }}" alt="Logo Tugu Keris Siginjai">
+                </div>
+
+                <div class="brand-logo">SIGINJAI</div>
+
+                <p class="brand-tagline">
+                    Sistem Gerbang Informasi Jasa , Anggaran & Investasi
+                </p>
+
+                <p class="brand-org">PLN UP3 Jambi</p>
 
             </div>
 
@@ -42,7 +49,7 @@
 
             <div class="registrasi-box">
 
-                <h1>Registrasi</h1>
+                <h1>Register</h1>
 
                 {{-- Pesan sukses --}}
                 @if(session('success'))
@@ -96,7 +103,7 @@
                     >
 
                     <button type="submit">
-                        Daftar
+                        Register
                     </button>
 
                 </form>

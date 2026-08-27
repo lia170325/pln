@@ -33,6 +33,14 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.sidebar .logo img {
+    max-width: 110px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
 .sidebar .logo h2 {
     font-size: 24px;
     font-weight: 700;

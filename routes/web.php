@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\InputDataController;
+use App\Http\Controllers\Admin\UploadController;
 
 // ==========================
 // LOGIN USER
@@ -23,9 +24,12 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 // ==========================
 // LOGIN ADMIN
 // ==========================
-Route::get('/login-admin', [AdminAuthController::class, 'index'])->name('login.admin');
-Route::post('/login-admin', [AdminAuthController::class, 'login'])->name('admin.login');
+
 Route::get('/logout-admin', [AdminAuthController::class, 'logout'])->name('logout.admin');
+
+// TAMBAHAN: Route Logout User (sebelumnya belum terdaftar sehingga
+// tombol Logout di Dashboard User mengarah ke halaman yang tidak ada).
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // ==========================
 // REGISTRASI
@@ -49,7 +53,25 @@ Route::get('/input-data', function () {
     return view('input-data');
 })->name('input-data');
 
-Route::post('/input-data', [InputDataController::class, 'store'])->name('input-data.store');
+Route::post('/input-data', [InputDataController::class, 'storeKhs'])->name('input-data.store');
+
+// ==========================
+// UPLOAD EXCEL
+// ==========================
+Route::get('/upload-excel', [UploadController::class, 'index'])->name('upload.index');
+
+Route::post('/upload-excel',
+    [InputDataController::class,'storeKhs'])
+    ->name('upload.store');
+
+// ==========================
+// TAMBAHAN: Upload terpisah - Monitoring Tiang & Monitoring Pelanggan
+// ==========================
+Route::post('/input-data/tiang', [InputDataController::class, 'storeTiang'])
+    ->name('input-data.store.tiang');
+
+Route::post('/input-data/pelanggan', [InputDataController::class, 'storePelanggan'])
+    ->name('input-data.store.pelanggan');
 
 // ==========================
 // UPDATE DATA
@@ -62,22 +84,11 @@ Route::get('/rekap', function () {
     return view('rekap');
 });
 
-// ==========================
-// KHS JASA
-// ==========================
-Route::get('/khs-jasa-2024', [DashboardController::class, 'khsJasa2024']);
-Route::get('/khs-jasa-2025', [DashboardController::class, 'khsJasa2025']);
-Route::get('/khs-jasa-2026', [DashboardController::class, 'khsJasa2026']);
+Route::get('/sheet/{id}', [DashboardController::class, 'show'])
+    ->name('sheet.show');
 
 // ==========================
-// KHS PEMBERSIHAN
+// TAMBAHAN: Live Search (Find/Search) Daftar Sheet
 // ==========================
-Route::get('/khs-pembersihan-2024', [DashboardController::class, 'pemb2024']);
-Route::get('/khs-pembersihan-2025', [DashboardController::class, 'pemb2025']);
-Route::get('/khs-pembersihan-2026', [DashboardController::class, 'pemb2026']);
-
-// ==========================
-// REGRESASI
-// ==========================
-Route::get('/regresasi-2025', [DashboardController::class, 'regresasi2025']);
-Route::get('/regresasi-2026', [DashboardController::class, 'regresasi2026']);
+Route::get('/search-sheet', [DashboardController::class, 'searchSheet'])
+    ->name('search.sheet');

@@ -23,9 +23,16 @@ class AdminAuthController extends Controller
         return redirect()->route('admin.dashboard'); // Arah ke dashboard admin
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
+        // PERBAIKAN: sebelumnya redirect ke route('login.admin') yang tidak
+        // terdaftar (menyebabkan error saat Logout diklik) dan session
+        // tidak di-invalidate sepenuhnya. Sekarang session dihapus total
+        // dan diarahkan ke halaman Login yang sebenarnya.
         session()->forget(['admin', 'nama']);
-        return redirect()->route('login.admin');
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login.view');
     }
 }
